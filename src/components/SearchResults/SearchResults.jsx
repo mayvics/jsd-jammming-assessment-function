@@ -1,8 +1,16 @@
 //import SearchResults.css
+import React from 'react'
+import "./SearchResults.css"
+import TrackList from "../TrackList/TrackList"
 
-const SearchResults = () => {
+
+const SearchResults = (props) => {
+  const {searchResults, onAdd} = props
   return (
-    <div>SearchResults</div>
+    <div className="SearchResults">
+      <h2>Results</h2>
+      <TrackList tracks= {searchResults} onAdd={onAdd}/>
+    </div>
   )
 }
 
